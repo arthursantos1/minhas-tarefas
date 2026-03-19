@@ -46,15 +46,21 @@ const Tarefa = ({
       <S.BarraAcoes>
         {estaEditando ? (
           <>
-            <S.BotaoSalvar onClick={() => {
-              dispatch(editar({
-                descricao,
-                id,
-                prioridade,
-                status,
-                titulo
-              }))
-            }}>Salvar</S.BotaoSalvar>
+            <S.BotaoSalvar
+              onClick={() => {
+                dispatch(
+                  editar({
+                    descricao,
+                    id,
+                    prioridade,
+                    status,
+                    titulo
+                  })
+                )
+              }}
+            >
+              Salvar
+            </S.BotaoSalvar>
             <S.BotaoCancelarRemover onClick={cancelarEdicao}>
               Cancelar
             </S.BotaoCancelarRemover>

@@ -42,7 +42,9 @@ const tarefaSlice = createSlice({
       ]
     },
     editar: (state, action: PayloadAction<Tarefa>) => {
-      const indexDaTarefa = state.itens.findIndex(t => t.id === action.payload.id)
+      const indexDaTarefa = state.itens.findIndex(
+        (t) => t.id === action.payload.id
+      )
 
       if (indexDaTarefa >= 0) {
         state.itens[indexDaTarefa] = action.payload
