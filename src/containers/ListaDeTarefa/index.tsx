@@ -5,6 +5,7 @@ import { RootReducer } from '../../store'
 
 const ListaDeTarefa = () => {
   const { itens } = useSelector((state: RootReducer) => state.tarefas)
+  const { termo } = useSelector((state: RootReducer) => state.filtro)
 
   return (
     <Container>
